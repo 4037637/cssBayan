@@ -2,6 +2,8 @@
     background-color: rgb(196, 161, 85);
 }
 
+/* Title styles start */
+
 .header {
     display: flex;
     margin: 1.2rem auto 1vh;
@@ -18,6 +20,8 @@
     font-weight:700;
     color: black;
 }
+
+/* Title styles end */
 
 .main {
     display: flex;
@@ -38,12 +42,9 @@
     padding-left: 0;
 }
 
-/* #accordion {
-    width:500px;
-}     */
 #accordion li {
     list-style: none;
-    width:100%;
+    width: 100%;
 }    
 
 #accordion li label {
@@ -52,18 +53,8 @@
     font-size: 1.8rem;
     line-height: 1.8rem;
     color:blue;
-    border-top: solid 1px grey;   
+    border-top: solid 0.1vh grey;   
 }
-
-/* .ltext{
-    padding: 0.5vh;
-    display: block;
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    color:blue;
-    border-top: solid 1px grey;
-}  */
-
 
 #accordion label + input[type='radio'] {
       display: none;
@@ -80,6 +71,8 @@
     animation-duration: 1s;
 }
 
+/* Accordion styles end */
+
 p {
     margin-block-start: 0;
     margin-block-end: 0.2rem;
@@ -90,29 +83,13 @@ p {
     100% {opacity: 1;}
 }
 
-.pic1 {
+.pic {
     height: 18.8rem;
     width: 18.8rem;
     transition: 1s
 }
 
-.pic2 {
-    height: 18.8rem;
-    width: 18.8rem;
-    transition: 1s
-}
-
-.pic3 {
-    height: 18.8rem;
-    width: 18.8rem;
-    transition: 1s
-}
-
-.pic4 {
-    height: 18.8rem;
-    width: 18.8rem;
-    transition: 1s
-}
+/* Media styles start */
 
 @media (hover: hover) {
     #accordion {
@@ -145,10 +122,6 @@ p {
         animation-name: Appearance;
         animation-duration: 1s;
     }
-    #accordion .c1:hover {
-        display: block;
-    }
-
     .list:hover .ltext {
         color: black
     }
@@ -163,27 +136,17 @@ p {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     .title {
         font-size: 1.1rem;
     }
     .ltext{
         font-size: 0.9rem;
     }
-    .pic1 {
-        height: 15rem;
-        width: 15rem;
-    }
-    .pic2 {
-        height: 15rem;
-        width: 15rem;
-    }
-    .pic3 {
-        height: 15rem;
-        width: 15rem;
-    }
-    .pic4 {
+    .pic {
         height: 15rem;
         width: 15rem;
     }
 }
+
+/* Media styles end */
