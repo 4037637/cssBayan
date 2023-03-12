@@ -1,16 +1,16 @@
 .body {
     background-color: rgb(196, 161, 85);
-    color: black;
 }
 
 .header {
-    margin: 20px auto 10px;
+    display: flex;
+    margin: 1.2rem auto 1vh;
     align-items: center;
 }
 
 .title-cont {
     max-width: 50%;
-    margin-left: 10%;
+    margin: 0 auto;
 }
 
 .title {
@@ -20,14 +20,14 @@
 
 .main {
     display: flex;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.2rem;
     align-items: center;
 }
 
 .list-cont {
     width: 80%;
-    max-width: 1200px;
-    margin-left: 10%;
+    max-width: 75rem;
+    margin: 0 auto;
 }
 
 .m-list {
@@ -37,12 +37,12 @@
     cursor:pointer;
 }
 
-.m-list:hover, .m-list:active, .m-list:focus .item-text {
+.m-list:active, .m-list:focus .item-text {
     color: black;
 }
 
 .m-item {
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
     list-style-type: none;
 }
 
@@ -54,59 +54,32 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 .item-text {
-    max-width: 450px;
+    max-width: 28rem;
     color: inherit;
 }
 
 .item-but {
-    max-width: 12px;
+    max-width: 1vw;
     color: black;
 }
 
 .line {
     display: block;
-    margin-bottom: 5px;
-    height: 0.1px;
+    margin-bottom: 0.5vh;
+    height: 0.1vh;
     width: 100%;
-    border: 1px solid grey;
+    background-color: grey;
+    border: 0.1vh solid grey;
 }
 
 @keyframes Appearance {
     0% {opacity: 0;}
     100% {opacity: 1;}
-}
-
-.tit1:hover + .sec1{
-    display: flex;
-    animation-name: Appearance;
-    animation-duration: 1s;
-    opacity: 1;
-}
-
-.tit2:hover + .sec2{
-    display: flex;
-    animation-name: Appearance;
-    animation-duration: 1s;
-    opacity: 1;
-}
-
-.tit3:hover + .sec3{
-    display: flex;
-    animation-name: Appearance;
-    animation-duration: 1s;
-    opacity: 1;
-}
-
-.tit4:hover + .sec4{
-    display: flex;
-    animation-name: Appearance;
-    animation-duration: 1s;
-    opacity: 1;
 }
 
 .pic-section {
@@ -117,33 +90,96 @@
 
 .pic1 {
     margin: 5px auto 0;
-    height: 300px;
-    width: 300px;
+    height: 18.8rem;
+    width: 18.8rem;
     transition: 1s
-}
-
-.pic:hover {
-    transform: scale(1.1);
-    transition: 1s;
-    
 }
 
 .pic2 {
     margin: 5px auto 0;
-    height: 300px;
-    width: 300px;
+    height: 18.8rem;
+    width: 18.8rem;
 }
 
 .pic3 {
     margin: 5px auto 0;
-    height: 300px;
-    width: 300px;
+    height: 18.8rem;
+    width: 18.8rem;
 }
 
 .pic4 {
     margin: 5px auto 0;
-    height: 300px;
-    width: 300px;
+    height: 18.8rem;
+    width: 18.8rem;
 }
 
+@media (hover: hover) {
+    .pic:hover {
+        transform: scale(1.1);
+        transition: 1s;  
+    }
+    .tit1:hover + .sec1{
+        display: flex;
+        animation-name: Appearance;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+    
+    .tit2:hover + .sec2{
+        display: flex;
+        animation-name: Appearance;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+    
+    .tit3:hover + .sec3{
+        display: flex;
+        animation-name: Appearance;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+    
+    .tit4:hover + .sec4{
+        display: flex;
+        animation-name: Appearance;
+        animation-duration: 1s;
+        opacity: 1;
+    }
+    .m-list:hover {
+        color: black;
+    }
+}
 
+@media (max-width: 820px) {
+    .title {
+        font-size: 1.7rem;
+    }
+    .item-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.1rem;
+    }
+    .item-title {
+        font-size: 0.9rem;
+    }
+    .pic1 {
+        height: 15rem;
+        width: 15rem;
+    }
+    .pic2 {
+        height: 15rem;
+        width: 15rem;
+    }
+    .pic3 {
+        height: 15rem;
+        width: 15rem;
+    }
+    .pic4 {
+        height: 15rem;
+        width: 15rem;
+    }
+}
