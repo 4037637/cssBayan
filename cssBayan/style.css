@@ -6,6 +6,7 @@
     display: flex;
     margin: 1.2rem auto 1vh;
     align-items: center;
+    max-height: 3rem;
 }
 
 .title-cont {
@@ -30,51 +31,58 @@
     margin: 0 auto;
 }
 
-.m-list {
+/* Accordion styles start */
+
+.list {
     margin-left: 0;
     padding-left: 0;
-    color: blue;
-    cursor:pointer;
 }
 
-.m-list:active, .m-list:focus .item-text {
-    color: black;
-}
+/* #accordion {
+    width:500px;
+}     */
+#accordion li {
+    list-style: none;
+    width:100%;
+}    
 
-.m-item {
-    margin-bottom: 1vh;
-    list-style-type: none;
-}
-
-.m-item:last-child {
-    margin-bottom: 0;
-}
-
-.item-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.item-text {
-    max-width: 28rem;
-    color: inherit;
-}
-
-.item-but {
-    max-width: 1vw;
-    color: black;
-}
-
-.line {
+#accordion li label {
+    padding: 0.5vh;
     display: block;
-    margin-bottom: 0.5vh;
-    height: 0.1vh;
-    width: 100%;
-    background-color: grey;
-    border: 0.1vh solid grey;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color:blue;
+    border-top: solid 1px grey;   
+}
+
+/* .ltext{
+    padding: 0.5vh;
+    display: block;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color:blue;
+    border-top: solid 1px grey;
+}  */
+
+
+#accordion label + input[type='radio'] {
+      display: none;
+}    
+
+#accordion .content {
+    display: none;
+    text-align: center;
+}
+
+#accordion label + input[type='radio']:checked + .content {
+    display: block;
+    animation-name: Appearance;
+    animation-duration: 1s;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0.2rem;
 }
 
 @keyframes Appearance {
@@ -82,71 +90,67 @@
     100% {opacity: 1;}
 }
 
-.pic-section {
-    display: none;
-    opacity: 0;
-    align-items: center;
-}
-
 .pic1 {
-    margin: 5px auto 0;
     height: 18.8rem;
     width: 18.8rem;
     transition: 1s
 }
 
 .pic2 {
-    margin: 5px auto 0;
     height: 18.8rem;
     width: 18.8rem;
+    transition: 1s
 }
 
 .pic3 {
-    margin: 5px auto 0;
     height: 18.8rem;
     width: 18.8rem;
+    transition: 1s
 }
 
 .pic4 {
-    margin: 5px auto 0;
     height: 18.8rem;
     width: 18.8rem;
+    transition: 1s
 }
 
 @media (hover: hover) {
+    #accordion {
+        cursor: pointer;
+    }
+    label {
+        cursor: pointer;
+    }
     .pic:hover {
         transform: scale(1.1);
         transition: 1s;  
     }
-    .tit1:hover + .sec1{
-        display: flex;
+    #accordion .tit1 + input[type='radio']:hover + .c1{
+        display: block;
         animation-name: Appearance;
         animation-duration: 1s;
-        opacity: 1;
     }
-    
-    .tit2:hover + .sec2{
-        display: flex;
+    #accordion .tit2 + input[type='radio']:hover + .c2{
+        display: block;
         animation-name: Appearance;
         animation-duration: 1s;
-        opacity: 1;
     }
-    
-    .tit3:hover + .sec3{
-        display: flex;
+    #accordion .tit3 + input[type='radio']:hover + .c3{
+        display: block;
         animation-name: Appearance;
         animation-duration: 1s;
-        opacity: 1;
     }
-    
-    .tit4:hover + .sec4{
-        display: flex;
+    #accordion .tit4 + input[type='radio']:hover + .c4{
+        display: block;
         animation-name: Appearance;
         animation-duration: 1s;
-        opacity: 1;
     }
-    .m-list:hover {
-        color: black;
+    #accordion .c1:hover {
+        display: block;
+    }
+
+    .list:hover .ltext {
+        color: black
     }
 }
 
@@ -154,8 +158,8 @@
     .title {
         font-size: 1.7rem;
     }
-    .item-title {
-        font-size: 1.1rem;
+    .ltext{
+        font-size: 1.5rem;
     }
 }
 
@@ -163,7 +167,7 @@
     .title {
         font-size: 1.1rem;
     }
-    .item-title {
+    .ltext{
         font-size: 0.9rem;
     }
     .pic1 {
