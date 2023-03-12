@@ -1,1 +1,85 @@
-Future css styles
+.body {
+    background-color: rgb(196, 161, 85);
+    color: black;
+}
+
+.header {
+    margin: 20px auto 10px;
+    align-items: center;
+}
+
+.title-cont {
+    max-width: 50%;
+    margin-left: 10%;
+}
+
+.title {
+    font-weight:700;
+    color: black;
+}
+
+.main {
+    margin: 0 auto 20px;
+    align-items: center;
+}
+
+.list-cont {
+    width: 80%;
+    max-width: 1200px;
+    margin-left: 10%;
+}
+
+.m-list {
+    margin-left: 0;
+    padding-left: 0;
+    color: blue;
+    cursor:pointer;
+}
+
+.m-list:hover, .m-list:active, .m-list:focus .item-text {
+    color: black;
+}
+
+.m-item {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.m-item:last-child {
+    margin-bottom: 0;
+}
+
+.item-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.item-text {
+    max-width: 450px;
+    color: inherit;
+}
+
+.item-but {
+    max-width: 12px;
+}
+
+.item-but {
+    color: black;
+}
+
+.line {
+    display: block;
+    margin-bottom: 5px;
+    height: 0.1px;
+    width: 100%;
+    border: 1px solid grey;
+}
+
+.item-pic {
+    margin: 5px auto 0;
+    height: 300px;
+    width: 300px;
+}
